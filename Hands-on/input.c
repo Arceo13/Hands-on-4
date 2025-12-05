@@ -13,34 +13,28 @@ int addValues(int first, int second) {
 int processValue(int value) {
     int temporaryVal;
     temporaryVal = value * SCALE_FACTOR;
-
     { /* nested block */
         int innerResult;
         innerResult = temporaryVal + 5;
         print(innerResult);
     }
-
     return temporaryVal;
 }
 
 int main() {
     int resultMain;
     int auxValue;
-
     globalA = 3;
     globalB = 4;
-
+    
     resultMain = addValues(globalA, globalB);
     print(resultMain);
-
     auxValue = processValue(resultMain);
     print(auxValue);
-
     {
         int finalOutput;
         finalOutput = auxValue + resultMain;
         print(finalOutput);
     }
-
     return 0;
 }
